@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@File  :JZ20.py
+@File  :JZ22_simple.py
 @Author:Sapphire
 @Date  :2020/9/23 23:21
 @Desc  :从上往下打印二叉树：
@@ -25,13 +25,18 @@ class Solution:
     # 返回从上到下每个节点值列表，例：[1,2,3]
     def PrintFromTopToBottom(self, root):
         # write code here
-        layer_list = [root]
-        if root is None:
+        if not root:
             return []
-        # 遍历每一层，从左到右追加元素到列表末尾，实现从上到下、从左到右的顺序
-        for node in layer_list:
+        queue = []
+        result = []
+
+        queue.append(root)
+        while len(queue) > 0:
+            node = queue.pop(0)
+            result.append(node.val)
             if node.left:
-                layer_list.append(node.left)
+                queue.append(node.left)
             if node.right:
-                layer_list.append(node.right)
-        return [i.val for i in layer_list]
+                queue.append(node.right)
+
+        return result
