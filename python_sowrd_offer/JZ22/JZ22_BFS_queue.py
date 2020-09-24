@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-@File  :JZ22_simple.py
+@File  :JZ22_BFS_queue.py
 @Author:Sapphire
-@Date  :2020/9/23 23:21
+@Date  :2020/9/25 00:35
 @Desc  :从上往下打印二叉树：
 从上往下打印出二叉树的每个节点，同层节点从左至右打印。
 知识点：二叉树，队列，树的层次遍历
