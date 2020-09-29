@@ -20,7 +20,7 @@ class Solution:
         if not ss:
             return ss
         self.helper(ss, "")
-        return self.sort_list
+        return sorted(set(self.sort_list))
 
     def helper(self, ss, result):
         if not ss:
