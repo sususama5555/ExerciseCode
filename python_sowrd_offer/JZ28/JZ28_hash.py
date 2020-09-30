@@ -3,7 +3,7 @@
 @File  :JZ28_hash.py
 @Author:Sapphire
 @Date  :2020/9/30 17:10
-@Desc  :数组中出现次数超过一半的数字：
+@Desc  :数组中出现次数超过一半的数字：时间复杂度：O(nlongn)、空间复杂度：O(n)
 使用python的dict当做hashmap，key:value，表示数字和出现次数的关系
 第一次出现的数字设为num:1，表示次数为1，
 每重复出现一次value+1，
