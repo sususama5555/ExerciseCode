@@ -8,6 +8,11 @@
 第一次出现的数字设为num:1，表示次数为1，
 每重复出现一次value+1，
 如果存在数字的value超过数字长度的一半，则返回该数字
+todo：排序法、候选法
+排序法：时间复杂度：O(nlongn)、空间复杂度：O(1)，排序后，判断中位数是否为众数。
+候选法：时间复杂度：O(n)、空间复杂度：O(1)，
+加入数组中存在众数，那么众数一定大于数组的长度的一半，
+如果两个数不相等，就消去这两个数，最坏情况下，每次消去一个众数和一个非众数，那么如果存在众数，最后留下的数肯定是众数
 """
 
 
@@ -25,6 +30,8 @@ class Solution:
                 hash_dict[num] = 1
             if hash_dict[num] > len(numbers) / 2:
                 return num
+        # 以下排序可以得到出现次数的排序
+        # sorted(hash_dict, key=lambda x: hash_dict[x], reverse=True)
         return 0
 
 
