@@ -20,6 +20,17 @@ function debounce(fn, delay) {
     };
 }
 
-const task = () => {console.log("run task")}
-const debounceTask  = debounce(task, 1000)
-window.addEventListener('scroll', debounceTask)
+function testAwait (x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(x);
+    }, 2000);
+  });
+}
+
+async function helloAsync() {
+  var x = await testAwait ("hello world");
+  console.log(x);
+}
+helloAsync ();
+// hello world
