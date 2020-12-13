@@ -3,7 +3,7 @@
 @File  :quick_sort.py
 @Author:Sapphire
 @Date  :2020/12/14 0:24
-@Desc  :
+@Desc  :快速排序
 """
 
 
