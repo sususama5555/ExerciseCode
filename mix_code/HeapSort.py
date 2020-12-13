@@ -35,7 +35,7 @@ def heapSort(arr):
     for i in range(n, -1, -1):
         heapify(arr, n, i)
 
-        # 一个个交换元素
+    # 一个个交换元素
     for i in range(n - 1, 0, -1):
         arr[i], arr[0] = arr[0], arr[i]  # 交换
         heapify(arr, i, 0)
