@@ -38,3 +38,7 @@ class Solution:
             else:
                 plow += 1
         return res
+
+
+solution = Solution()
+print(solution.FindContinuousSequence(4))
