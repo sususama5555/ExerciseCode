@@ -12,7 +12,7 @@
 
 
 class Solution:
-    def Find(self, target, array):
+    def find(self, target, array):
         row = len(array) - 1
         col = len(array[0]) - 1
         i = row
@@ -25,3 +25,31 @@ class Solution:
             else:
                 return True
         return False
+
+    def find_opt(self, target, array):
+        row = len(array) - 1
+        col = len(array[0]) - 1
+        i = 0
+        j = col
+        while i <= row and j >= 0:
+            if array[i][j] > target:
+                j -= 1
+            elif array[i][j] < target:
+                i += 1
+            else:
+                return True
+        return False
+
+
+test_case = [
+    [1, 2, 3, 34, 55, 100],
+    [3, 6, 7, 55, 100, 101],
+    [5, 9, 10, 66, 102, 104],
+    [15, 20, 30, 86, 222, 344],
+]
+
+test_target = 102
+
+solution = Solution()
+print(solution.find(test_target, test_case))
+print(solution.find_opt(test_target, test_case))

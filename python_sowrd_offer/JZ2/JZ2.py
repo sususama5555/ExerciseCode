@@ -11,16 +11,14 @@
 
 class Solution:
     # s 源字符串
-    def replaceSpace(self, s):
-        return s.replace(" ", "%20")
+    def replaceSpace(self, pre_s):
+        return pre_s.replace(" ", "%20")
 
-    def replaceSpace_s(self, s):
-        s_ = ""
-        for j in s:
-            if j == " ":
-                s_ += "%20"
+    def replaceSpace_s(self, pre_s):
+        res_s = ""
+        for char in pre_s:
+            if char == " ":
+                res_s += "%20"
             else:
-                s_ += j
-        return s_
-
-
+                res_s += char
+        return res_s

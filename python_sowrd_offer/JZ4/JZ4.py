@@ -19,11 +19,11 @@ class TreeNode:
 
 class Solution:
     # 返回构造的TreeNode根节点
-    def reConstructBinaryTree(self, pre, tin):
+    def reConstructBinaryTree(self, pre, vin):
         if not pre:
             return None
         root = TreeNode(pre[0])
-        index = tin.index(root.val)
-        root.left = self.reConstructBinaryTree(pre[1:index + 1], tin[0:index])
-        root.right = self.reConstructBinaryTree(pre[index + 1:], tin[index + 1:])
+        index = vin.index(root.val)
+        root.left = self.reConstructBinaryTree(pre[1:index + 1], vin[0:index])
+        root.right = self.reConstructBinaryTree(pre[index + 1:], vin[index + 1:])
         return root
