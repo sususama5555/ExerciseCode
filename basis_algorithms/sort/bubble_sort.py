@@ -36,6 +36,6 @@ def bubble_sort_opt(array):
     return array
 
 
-array = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48]
-print(bubble_sort(array))
-print(bubble_sort_opt(array))
+test_case_1 = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48]
+print(bubble_sort(test_case_1))
+print(bubble_sort_opt(test_case_1))

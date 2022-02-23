@@ -16,10 +16,11 @@ def selection_sort(array):
     然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。
     以此类推，直到全部待排序的数据元素的个数为零。
     """
-    loop = len(array) - 1
-    for i in range(loop):
+    # 最后一个元素不需要排序
+    for i in range(len(array) - 1):
         min_index = i
-        for j in range(i, loop - 1):
+        # 与i之后的元素对比
+        for j in range(i + 1, len(array)):
             if array[j] < array[min_index]:
                 min_index = j
         array[i], array[min_index] = array[min_index], array[i]
